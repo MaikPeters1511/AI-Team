@@ -5,11 +5,20 @@ description: >-
   Angular (Frontend) durch – inkl. Clean-Architecture-/DDD-Konformität,
   Performance und einer verbindlichen Sicherheitsprüfung auf aktuelle
   Schwachstellen (OWASP Top 10, bekannte CVEs in NuGet/npm-Paketen). Aktiviere
-  diesen Skill immer, wenn ein Code-Review, Pull-Request-Review oder eine
-  Sicherheitsprüfung für Backend- (.NET/C#/Wolverine), Frontend- (Angular/
-  TypeScript/DaisyUI) oder Fullstack-Code angefragt wird – auch wenn nur
-  "Review", "PR checken", "Sicherheitslücken finden" oder "ist das sicher?"
-  gesagt wird, ohne dass explizit "Code-Review" genannt wird.
+  diesen Skill immer, wenn ein Code-Review, Pull-Request-Review, Merge-Check
+  oder eine Sicherheitsprüfung für Backend- (.NET/C#/Wolverine), Frontend-
+  (Angular/TypeScript/DaisyUI) oder Fullstack-Code angefragt wird – auch bei
+  beiläufigen Formulierungen ohne das Wort "Code-Review": "schau mal über
+  meinen PR/Code drüber", "ist das sicher?", "check das mal", "haben wir
+  veraltete/verwundbare Pakete", "ist das OWASP-/Clean-Architecture-konform?",
+  oder wenn jemand einen Code-Ausschnitt einfügt und nach einer Einschätzung
+  fragt. Löst auch bei Erwähnung typischer Dateimuster im Review-Kontext aus
+  (`*Controller.cs`, `*Service.cs`, `*Repository.cs`, `*.component.ts`) in
+  Kombination mit "review", "PR", "sicher", "mergen" oder "OWASP". Nicht
+  auslösen für reine Neu-Implementierung, Konzept-/Lernfragen, Planung oder
+  unabhängiges Debugging ohne Review-/Sicherheitsbezug (z. B. "füge Feature X
+  hinzu", "erkläre mir switchMap vs. mergeMap", "Sprint planen", "meine
+  EF-Core-Migration ist kaputt").
 ---
 
 # Code Review: .NET, TypeScript & Angular
