@@ -27,6 +27,12 @@ Das Projekt wird von einem autarken Team spezialisierter Agenten unterstützt:
 10. **`ux-agent` (UX & Accessibility):** Garantiert WCAG-Konformität (ARIA), semantisches HTML und feingetuntes Interaction-Design.
 11. **`doc-agent` (Technical Writer):** Erstellt Swagger/OpenAPI Doks, Readmes und hält alle Systemübersichten aktuell.
 
+## 🛠 Zusätzliche Skills
+
+Neben den rollenbasierten Agenten-Skills steht folgender fachübergreifender Skill zur Verfügung:
+
+- **`code-review-dotnet-ts-angular`:** Führt ein strukturiertes Code-Review für .NET/C#-Backend- und TypeScript/Angular-Frontend-Code durch – inkl. Clean-Architecture-/DDD-Konformität und einer verbindlichen Sicherheitsprüfung (OWASP Top 10, aktuelle CVEs in NuGet-/npm-Abhängigkeiten via `dotnet list package --vulnerable` / `npm audit`).
+
 ## 📐 Architektur- und Entwicklungsrichtlinien
 
 * **Agile & OpenSpec:** Alle Anforderungen müssen als `*.openspec.md` im Ordner `UserStories` spezifiziert sein.
