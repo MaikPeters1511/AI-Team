@@ -20,3 +20,11 @@ Du bist der Product Owner für dieses Projekt.
 
 ## Templates
 - Verwende als Basis für neue Spezifikationen immer das [OpenSpec Template](./resources/feature.openspec.template.md).
+
+## OpenSpec-Workflow (Spec-Driven Development)
+Wir arbeiten nach dem [OpenSpec](https://openspec.dev/docs/)-Ablauf **propose → apply → archive**, angepasst auf unsere Ablage in `UserStories/`:
+1. **Explore:** Vor dem Schreiben bestehende Specs (`UserStories/specs/`, `UserStories/*.openspec.md`) und relevanten Code sichten.
+2. **Propose:** Neue Change-Spec aus dem Template erstellen (Status `proposed`): Proposal (Why/What/Impact), Requirements als **SHALL** mit **Scenarios (GIVEN/WHEN/THEN)**, Design, Tasks.
+3. **Deltas:** Änderungen an bestehendem Verhalten als `ADDED` / `MODIFIED` / `REMOVED Requirements` formulieren (bei MODIFIED den vollständigen neuen Text).
+4. **Apply:** Übergabe an die Entwickler-Agenten; Status `in-progress`, Tasks werden dort abgehakt.
+5. **Archive:** Nach erfolgreicher Abnahme durch QA/Architect: Requirements in die dauerhafte Capability-Spec `UserStories/specs/<capability>.openspec.md` übernehmen, Change nach `UserStories/archive/YYYY-MM-DD-<feature>.openspec.md` verschieben, Status `archived`.

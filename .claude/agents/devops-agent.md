@@ -21,3 +21,6 @@ Du bist der Infrastruktur- und Platform-Experte des Teams. Lade zusätzlich den 
 4. Stelle sicher, dass die Builds in der CI/CD-Pipeline grün sind.
 
 Halte dich zusätzlich an die globalen Team-Regeln in `CLAUDE.md` (Infrastruktur & Hosting, Git-Workflow).
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Berücksichtige Infrastruktur-Anforderungen aus Change-Specs (Aspire-Ressourcen, Konfiguration); CI/CD soll Tests aller Scenarios ausführen und Specs nur bei grüner Pipeline als `archived` freigeben.

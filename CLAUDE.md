@@ -35,6 +35,8 @@ Für jede Rolle existiert ein Subagent unter `.claude/agents/` (per Task-Tool au
 │   ├── agents/      # Subagenten-Definitionen (eine Rolle je Datei)
 │   └── skills/      # Skills mit Details/Vorgehen/Templates je Rolle
 ├── UserStories/      # Zentrale Ablage für alle *.openspec.md Features & Stories
+│   ├── specs/        # Dauerhafte Capability-Specs (Ergebnis archivierter Changes)
+│   └── archive/      # Abgeschlossene Change-Specs (YYYY-MM-DD-<feature>.openspec.md)
 ├── Tests/            # Zentraler Ordner für alle Frontend- und Backend-Tests
 ├── docs/adr/          # Architecture Decision Records
 ├── LICENSE
@@ -43,6 +45,7 @@ Für jede Rolle existiert ein Subagent unter `.claude/agents/` (per Task-Tool au
 
 ## 📐 Architektur & Methodik
 - **Agile & OpenSpec:** Alle Anforderungen müssen als `*.openspec.md` in `UserStories/` spezifiziert sein.
+- **OpenSpec-Workflow ([openspec.dev](https://openspec.dev/docs/)):** propose → apply → archive. Anforderungen als **SHALL**-Requirements mit **Scenarios (GIVEN/WHEN/THEN)**; Änderungen als `ADDED`/`MODIFIED`/`REMOVED Requirements`; jede Change-Spec enthält Proposal, Design und `Tasks`-Checkliste. Jedes Scenario wird ein Test (TDD). Nach Abnahme: Requirements nach `UserStories/specs/` übernehmen, Change nach `UserStories/archive/` verschieben. Details im Skill `po-agent`.
 - **Clean Architecture & Vertical Slices:** Strikte Trennung von Domain, Application, Infrastructure und Presentation/Web.
   - **Domain Layer:** Keine Infrastruktur-Abhängigkeiten (kein EF Core, keine HTTP-Clients). Aggregate Roots, Entities, Value Objects, Domain Events.
   - **Application Layer:** Use Cases, CQRS (Commands & Queries), Repository-Interfaces.
