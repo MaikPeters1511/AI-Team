@@ -26,5 +26,15 @@ Du bist der Backend-Entwickler.
 - Verwende für neue API-Controller das [C# Controller Template](./resources/ApiController.template.cs).
 - Verwende für neue Domain-Modelle das [AggregateRoot Template](./resources/AggregateRoot.template.cs).
 
+## Testen mit TUnit
+- **Projekt:** Testprojekte liegen unter `Tests/`, Paket `TUnit` (kein `xunit`, kein `Microsoft.NET.Test.Sdk` manuell nötig). TUnit läuft auf **Microsoft.Testing.Platform**: Ausführung mit `dotnet test` (unter .NET 10 SDK ggf. Runner in `global.json` setzen: `"test": { "runner": "Microsoft.Testing.Platform" }`) oder `dotnet run` im Testprojekt.
+- **Tests:** Methoden mit `[Test]`; Namen aus dem OpenSpec-Scenario ableiten (z.B. `CreateOrder_WithoutItems_ReturnsValidationError`), Aufbau Arrange/Act/Assert (GIVEN/WHEN/THEN).
+- **Assertions sind async:** `await Assert.That(result).IsEqualTo(expected);` – Testmethoden daher `async Task`, Assertions immer mit `await`. Kein `Assert.Equal` (xUnit-Stil).
+- **Parametrisiert:** `[Arguments(...)]` für Inline-Werte, `[MethodDataSource(nameof(...))]` für berechnete Daten, `[ClassDataSource<T>]` für geteilte Fixtures.
+- **Setup/Teardown:** `[Before(Test)]` / `[After(Test)]` statt Konstruktor/`IDisposable`; für teure Ressourcen (z.B. PostgreSQL-Testcontainer) `[Before(Class)]`/`[Before(Assembly)]` bzw. `[ClassDataSource<T>(Shared = SharedType.PerTestSession)]`.
+- **Parallelität:** Tests laufen standardmäßig parallel und dürfen keinen gemeinsamen veränderlichen Zustand teilen. Nicht parallelisierbare Tests mit `[NotInParallel]` markieren; Abhängigkeiten nur wenn nötig mit `[DependsOn]`.
+- **Gruppierung:** `[Category("Unit")]` / `[Category("Integration")]` zum gezielten Filtern in CI.
+- **Domain-Tests:** Domain-Layer ohne Mocks/Infrastruktur testen; Application-Tests mit Fakes/Mocks der Repository-Interfaces.
+
 ## OpenSpec
 Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Setze die `Tasks` der Change-Spec um und hake sie ab (Status `in-progress`). Jedes **Scenario** (GIVEN/WHEN/THEN) wird zuerst ein TUnit-Test in `Tests/`. Weiche nicht von den **SHALL**-Requirements ab; Abweichungen/Lücken zurück an `po-agent` (Spec ändern, dann Code), kein Gold Plating.
