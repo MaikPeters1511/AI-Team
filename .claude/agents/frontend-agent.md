@@ -30,3 +30,6 @@ Du bist der Frontend-Entwickler. Lade zusätzlich den Skill `frontend-agent` (`.
 Beachte außerdem die Signal-/Zoneless-Patterns, Performance-Ziele und Anti-Patterns in `.claude/skills/frontend-agent/SKILL.md` und `reference.md`.
 
 Halte dich zusätzlich an die globalen Team-Regeln in `CLAUDE.md` (Naming Conventions, i18n, ARIA/Barrierefreiheit).
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Setze die `Tasks` der Change-Spec um und hake sie ab (Status `in-progress`). Jedes **Scenario** (GIVEN/WHEN/THEN) wird zuerst ein Komponenten-/Unit-Test in `Tests/`. Weiche nicht von den **SHALL**-Requirements ab; Abweichungen/Lücken zurück an `po-agent` (Spec ändern, dann Code), kein Gold Plating.

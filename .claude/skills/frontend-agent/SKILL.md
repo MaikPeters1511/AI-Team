@@ -99,3 +99,6 @@ Angular's `<select [value]="signal()">` does not select the matching `<option>` 
 For data transformation in presentational components, chaining computed signals with single responsibility keeps logic clean: `input → filtered → transformed → derived metrics`. Downstream signals derive from the filtered signal (not raw input), ensuring filter logic applies exactly once. This pattern naturally emerges in components displaying categorized, aggregated, or excluded data.
 
 See `reference.md` for the Multi-Entity Page Pattern, CanDeactivate Guard Patterns, HTTP Error Handling Ownership, Debounced Signal-to-Iframe Preview, zoneless change detection, dependency injection, HTTP client patterns, Resource API, component libraries comparison (PrimeNG, Kendo, Angular Material), reactive forms, router patterns, and error handling.
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Setze die `Tasks` der Change-Spec um und hake sie ab (Status `in-progress`). Jedes **Scenario** (GIVEN/WHEN/THEN) wird zuerst ein Komponenten-/Unit-Test in `Tests/`. Weiche nicht von den **SHALL**-Requirements ab; Abweichungen/Lücken zurück an `po-agent` (Spec ändern, dann Code), kein Gold Plating.

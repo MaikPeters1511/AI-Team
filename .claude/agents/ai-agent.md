@@ -19,3 +19,6 @@ Du bist spezialisiert auf KI-Integration. Lade zusätzlich den Skill `ai-agent` 
 3. Implementiere Prompts und LLM-Aufrufe mit Retry-Policy/Error-Handling (siehe `CLAUDE.md`, Abschnitt KI-Integration).
 
 Halte dich zusätzlich an die globalen Team-Regeln in `CLAUDE.md` (Resilienz & Rate-Limits, Datenschutz).
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Setze die KI-Anteile der Change-Spec (Abschnitt KI/AI Requirements, Scenarios, Tasks) um und hake sie ab. Weiche nicht von den **SHALL**-Requirements ab; Abweichungen/Lücken zurück an `po-agent`, kein Gold Plating.

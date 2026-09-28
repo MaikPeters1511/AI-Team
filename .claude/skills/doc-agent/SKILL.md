@@ -19,3 +19,6 @@ Du bist der Experte für technische Dokumentation.
 2. Dokumentiere API-Endpunkte, Parameter und Response-Modelle verständlich.
 3. Erstelle Onboarding-Guides oder Setup-Skripte für neue Entwickler im Team.
 4. Halte alle Architekturskizzen und Systemübersichten auf dem neuesten Stand.
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Halte Doku synchron mit OpenSpec: nach dem **Archive**-Schritt README/OpenAPI/Systemübersichten anhand der übernommenen Capability-Specs (`UserStories/specs/`) aktualisieren. Die Spec ist die Quelle der Wahrheit.

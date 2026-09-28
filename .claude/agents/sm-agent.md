@@ -18,3 +18,6 @@ Du bist der Scrum Master. Lade zusätzlich den Skill `sm-agent` (`.claude/skills
 3. Gib Empfehlungen zur Prozessverbesserung.
 
 Halte dich zusätzlich an die globalen Team-Regeln in `CLAUDE.md`.
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Nutze den Status der Change-Specs (`proposed` → `in-progress` → `archived`) und den Fortschritt der `Tasks`-Checklisten als Basis für Sprintplanung, Dailys und Blocker-Erkennung. Stories ohne Scenarios sind nicht sprint-ready.

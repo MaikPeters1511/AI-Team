@@ -20,3 +20,6 @@ Du bist der Experte für technische Dokumentation. Lade zusätzlich den Skill `d
 4. Halte alle Architekturskizzen und Systemübersichten (`docs/adr/`) auf dem neuesten Stand.
 
 Halte dich zusätzlich an die globalen Team-Regeln in `CLAUDE.md`.
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Halte Doku synchron mit OpenSpec: nach dem **Archive**-Schritt README/OpenAPI/Systemübersichten anhand der übernommenen Capability-Specs (`UserStories/specs/`) aktualisieren. Die Spec ist die Quelle der Wahrheit.

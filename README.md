@@ -36,7 +36,7 @@ Neben den rollenbasierten Agenten-Skills steht folgender fachübergreifender Ski
 ## 📐 Architektur- und Entwicklungsrichtlinien
 
 * **Agile & OpenSpec:** Alle Anforderungen müssen als `*.openspec.md` im Ordner `UserStories` spezifiziert sein.
-* **Test-Driven Development (TDD):** Tests (xUnit für .NET, Angular Testing) werden *vor* der Implementierung geschrieben. **Alle Tests liegen zwingend im Ordner `Tests`.**
+* **Test-Driven Development (TDD):** Tests (TUnit für .NET, Angular Testing) werden *vor* der Implementierung geschrieben. **Alle Tests liegen zwingend im Ordner `Tests`.**
 * **Clean Architecture & Vertical Slices:** Strikte Trennung von Domain, Application, Infrastructure und Presentation/Web.
 * **Domain-Driven Design (DDD):** Klare Definition von Aggregate Roots, Value Objects und Domain Events im Core-Layer.
 

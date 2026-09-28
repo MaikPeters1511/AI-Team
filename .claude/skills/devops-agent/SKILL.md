@@ -20,3 +20,6 @@ Du bist der Infrastruktur- und Platform-Experte des Teams.
 2. Erstelle oder aktualisiere Container-Definitionen und Orchestrierungs-Skripte.
 3. Integriere neue Services in die .NET Aspire Orchestrierung.
 4. Stelle sicher, dass die Builds in der CI/CD-Pipeline grün sind.
+
+## OpenSpec
+Grundlage ist die Change-Spec (`UserStories/*.openspec.md`, Ablauf propose → apply → archive, siehe `po-agent`). Berücksichtige Infrastruktur-Anforderungen aus Change-Specs (Aspire-Ressourcen, Konfiguration); CI/CD soll Tests aller Scenarios ausführen und Specs nur bei grüner Pipeline als `archived` freigeben.
